@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Wilson - Personal Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body { font-family: 'Inter', sans-serif; }
+        .writing-card:hover .card-overlay { opacity: 1; }
+        .project-card:hover .project-overlay { opacity: 1; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="text-2xl font-['Pacifico'] text-primary">James Wilson</a>
+            <div class="flex items-center space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                <a href="#writing" class="text-gray-700 hover:text-primary transition-colors">Writing</a>
+                <a href="#projects" class="text-gray-700 hover:text-primary transition-colors">Projects</a>
+                <a href="#reading" class="text-gray-700 hover:text-primary transition-colors">Reading</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                <button id="langSwitch" class="w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition-colors cursor-pointer">
+                    <i class="ri-global-line text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="pt-24 pb-20 relative overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center">
+                    <div class="w-1/2 pr-12">
+                        <h1 class="text-5xl font-bold text-gray-900 mb-6">Building Digital Experiences with Purpose</h1>
+                        <p class="text-xl text-gray-600 mb-8">Full-stack developer passionate about creating meaningful solutions through code. Focused on web technologies and user experience design.</p>
+                        <a href="#contact" class="inline-flex items-center px-6 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 transition-colors cursor-pointer whitespace-nowrap">
+                            Let's Connect
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                    <div class="w-1/2">
+                        <img src="https://public.readdy.ai/ai/img_res/b4adcdea5d8fce0f14e21c879fa568e1.jpg" alt="Hero Image" class="rounded-lg shadow-xl object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="writing" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12">Recent Writings</h2>
+                <div class="grid grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/cd319c0355ef07e9e23a079c8312364b.jpg" alt="Article 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-3">
+                                <span>March 10, 2025</span>
+                                <span class="mx-2">•</span>
+                                <span>5 min read</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">The Future of Web Development</h3>
+                            <p class="text-gray-600 mb-4">Exploring emerging trends and technologies shaping the future of web development...</p>
+                            <a href="#" class="text-primary hover:text-primary/80 font-medium">Read More →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/ccf03855eb972de36d28e05060061462.jpg" alt="Article 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-3">
+                                <span>March 5, 2025</span>
+                                <span class="mx-2">•</span>
+                                <span>7 min read</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Mastering Modern UI Design</h3>
+                            <p class="text-gray-600 mb-4">Key principles and practices for creating engaging user interfaces...</p>
+                            <a href="#" class="text-primary hover:text-primary/80 font-medium">Read More →</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/0ad2f9e2c2f388e60a4a0e65e0cacd37.jpg" alt="Article 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-3">
+                                <span>February 28, 2025</span>
+                                <span class="mx-2">•</span>
+                                <span>6 min read</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Clean Architecture Patterns</h3>
+                            <p class="text-gray-600 mb-4">Building scalable applications with clean architecture principles...</p>
+                            <a href="#" class="text-primary hover:text-primary/80 font-medium">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12">Featured Projects</h2>
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/bfc3c3526565ce5572eb0f5254752a89.jpg" alt="Project 1" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Analytics Dashboard</h3>
+                            <p class="text-gray-600 mb-4">A real-time analytics dashboard built with React and D3.js</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">React</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">D3.js</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">TypeScript</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                                View Project
+                                <i class="ri-external-link-line ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/9b574c50e785a9699ad9a8c424f8afb3.jpg" alt="Project 2" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Task Management App</h3>
+                            <p class="text-gray-600 mb-4">A cross-platform mobile app for efficient task management</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">React Native</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Node.js</span>
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">MongoDB</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                                View Project
+                                <i class="ri-external-link-line ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reading" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12">Currently Reading & Learning</h2>
+                <div class="grid grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Books</h3>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <img src="https://public.readdy.ai/ai/img_res/80daaefce909f883f72dc9e76d89da0e.jpg" alt="Book 1" class="w-full h-48 object-cover rounded mb-4">
+                                <h4 class="font-medium text-gray-900">Clean Architecture</h4>
+                                <p class="text-gray-600 text-sm">Robert C. Martin</p>
+                                <div class="mt-2 bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary rounded-full h-2" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <img src="https://public.readdy.ai/ai/img_res/e522a62158521e80e7526f7aaacbb293.jpg" alt="Book 2" class="w-full h-48 object-cover rounded mb-4">
+                                <h4 class="font-medium text-gray-900">Design Patterns</h4>
+                                <p class="text-gray-600 text-sm">Erich Gamma</p>
+                                <div class="mt-2 bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary rounded-full h-2" style="width: 45%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Learning Progress</h3>
+                        <div class="space-y-6">
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h4 class="font-medium text-gray-900">Advanced TypeScript</h4>
+                                    <span class="text-sm text-gray-600">85%</span>
+                                </div>
+                                <div class="bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary rounded-full h-2" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h4 class="font-medium text-gray-900">System Design</h4>
+                                    <span class="text-sm text-gray-600">60%</span>
+                                </div>
+                                <div class="bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary rounded-full h-2" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h4 class="font-medium text-gray-900">Cloud Architecture</h4>
+                                    <span class="text-sm text-gray-600">40%</span>
+                                </div>
+                                <div class="bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary rounded-full h-2" style="width: 40%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="max-w-2xl mx-auto text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+                    <p class="text-gray-600">Have a project in mind or just want to chat? Feel free to reach out!</p>
+                </div>
+                <div class="max-w-xl mx-auto">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 bg-primary text-white !rounded-button hover:bg-primary/90 transition-colors cursor-pointer whitespace-nowrap">Send Message</button>
+                    </form>
+                </div>
+                <div class="mt-12 flex justify-center space-x-6">
+                    <a href="#" class="w-12 h-12 flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+                        <i class="ri-github-line text-2xl"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+                        <i class="ri-linkedin-line text-2xl"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+                        <i class="ri-twitter-line text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-50 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center">
+                <p class="text-gray-600">© 2025 James Wilson. All rights reserved.</p>
+                <button id="backToTop" class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary transition-colors cursor-pointer">
+                    <i class="ri-arrow-up-line text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+    <div id="languageModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-6 w-80">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Select Language</h3>
+            <div class="space-y-2">
+                <button class="w-full px-4 py-2 text-left hover:bg-gray-100 rounded transition-colors" onclick="switchLanguage('en')">
+                    English
+                </button>
+                <button class="w-full px-4 py-2 text-left hover:bg-gray-100 rounded transition-colors" onclick="switchLanguage('zh')">
+                    中文
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('langSwitch').addEventListener('click', () => {
+            document.getElementById('languageModal').style.display = 'flex';
+        });
+
+        document.getElementById('languageModal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('languageModal')) {
+                document.getElementById('languageModal').style.display = 'none';
+            }
+        });
+
+        function switchLanguage(lang) {
+            document.getElementById('languageModal').style.display = 'none';
+        }
+
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            console.log('Form submitted:', Object.fromEntries(formData));
+            e.target.reset();
+        });
+
+        document.addEventListener('scroll', () => {
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) {
+                backToTop.style.opacity = '1';
+            } else {
+                backToTop.style.opacity = '0';
+            }
+        });
+    </script>
+</body>
+</html>
