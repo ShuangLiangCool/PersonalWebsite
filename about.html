@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Shuang Liang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body { font-family: 'Inter', sans-serif; }
+        [data-lang] { display: none; }
+        [data-lang].active { display: block; }
+    </style>
+    <script src="translations.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" class="text-2xl font-['Pacifico'] text-primary">Shuang Liang</a>
+            <div class="flex items-center space-x-8">
+                <a href="/" class="text-gray-700 hover:text-primary transition-colors" data-translate="nav.home">Home</a>
+                <a href="/about.html" class="text-primary font-medium" data-translate="nav.about">About</a>
+                <a href="/#writing" class="text-gray-700 hover:text-primary transition-colors" data-translate="nav.writing">Writing</a>
+                <a href="/#projects" class="text-gray-700 hover:text-primary transition-colors" data-translate="nav.projects">Projects</a>
+                <a href="/#reading" class="text-gray-700 hover:text-primary transition-colors" data-translate="nav.reading">Reading</a>
+                <a href="/#contact" class="text-gray-700 hover:text-primary transition-colors" data-translate="nav.contact">Contact</a>
+                <button id="langSwitch" class="w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition-colors cursor-pointer">
+                    <i class="ri-global-line text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-20">
+        <div class="container mx-auto px-6">
+            <!-- Introduction -->
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h1 class="text-4xl font-bold text-gray-900 mb-6" data-translate="about.title">About Me</h1>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4" data-translate="about.intro">Hi, I'm Shuang Liang</h2>
+                <p class="text-xl text-gray-600" data-translate="about.bio">I'm a passionate full-stack developer with a keen interest in creating meaningful digital experiences. With expertise in modern web technologies and user experience design, I strive to build solutions that make a difference.</p>
+            </div>
+
+            <!-- Experience -->
+            <div class="mb-16">
+                <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-sm p-8">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6" data-translate="about.experience.title">Experience</h3>
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="text-xl font-medium text-gray-800" data-translate="about.experience.years">5+ Years of Experience</h4>
+                    </div>
+                    <p class="text-gray-600" data-translate="about.experience.description">Working with modern web technologies and delivering high-quality solutions</p>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="mb-16">
+                <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-sm p-8">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6" data-translate="about.skills.title">Technical Skills</h3>
+                    <div class="grid grid-cols-3 gap-8">
+                        <!-- Frontend -->
+                        <div>
+                            <h4 class="text-lg font-medium text-gray-800 mb-4" data-translate="about.skills.frontend.title">Frontend</h4>
+                            <ul class="space-y-2" id="frontendSkills">
+                                <!-- Skills will be populated by JavaScript -->
+                            </ul>
+                        </div>
+                        <!-- Backend -->
+                        <div>
+                            <h4 class="text-lg font-medium text-gray-800 mb-4" data-translate="about.skills.backend.title">Backend</h4>
+                            <ul class="space-y-2" id="backendSkills">
+                                <!-- Skills will be populated by JavaScript -->
+                            </ul>
+                        </div>
+                        <!-- Tools -->
+                        <div>
+                            <h4 class="text-lg font-medium text-gray-800 mb-4" data-translate="about.skills.tools.title">Tools & Others</h4>
+                            <ul class="space-y-2" id="toolsSkills">
+                                <!-- Skills will be populated by JavaScript -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="mb-16">
+                <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-sm p-8">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6" data-translate="about.education.title">Education</h3>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2" data-translate="about.education.degree">Bachelor of Science in Computer Science</h4>
+                    <p class="text-gray-600">
+                        <span data-translate="about.education.university">University of Technology</span>
+                        <span class="mx-2">•</span>
+                        <span data-translate="about.education.year">2019</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center">
+                <p class="text-gray-600" data-translate="footer.copyright">© 2025 Shuang Liang. All rights reserved.</p>
+                <button id="backToTop" class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary transition-colors cursor-pointer">
+                    <i class="ri-arrow-up-line text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Language Modal -->
+    <div id="languageModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-6 w-80">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4" data-translate="languageSelector.title">Select Language</h3>
+            <div class="space-y-2">
+                <button class="w-full px-4 py-2 text-left hover:bg-gray-100 rounded transition-colors" onclick="switchLanguage('en')" data-translate="languageSelector.english">
+                    English
+                </button>
+                <button class="w-full px-4 py-2 text-left hover:bg-gray-100 rounded transition-colors" onclick="switchLanguage('zh')" data-translate="languageSelector.chinese">
+                    中文
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize language
+        let currentLang = localStorage.getItem('language') || 'en';
+        document.documentElement.lang = currentLang;
+
+        // Function to get nested object value using dot notation
+        function getNestedValue(obj, path) {
+            return path.split('.').reduce((current, key) => current && current[key], obj);
+        }
+
+        // Function to populate skills
+        function populateSkills() {
+            const skillSections = ['frontend', 'backend', 'tools'];
+            skillSections.forEach(section => {
+                const container = document.getElementById(`${section}Skills`);
+                const skills = translations[currentLang].about.skills[section].items;
+                container.innerHTML = skills.map(skill => `
+                    <li class="flex items-center">
+                        <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                        <span>${skill}</span>
+                    </li>
+                `).join('');
+            });
+        }
+
+        // Function to update all translations on the page
+        function updateTranslations() {
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                const translation = getNestedValue(translations[currentLang], key);
+                if (translation) {
+                    element.textContent = translation;
+                }
+            });
+            populateSkills();
+        }
+
+        // Language switching functionality
+        function switchLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('language', lang);
+            document.documentElement.lang = lang;
+            updateTranslations();
+            document.getElementById('languageModal').style.display = 'none';
+        }
+
+        // Initialize translations
+        document.addEventListener('DOMContentLoaded', () => {
+            updateTranslations();
+        });
+
+        // Language modal controls
+        document.getElementById('langSwitch').addEventListener('click', () => {
+            document.getElementById('languageModal').style.display = 'flex';
+        });
+
+        document.getElementById('languageModal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('languageModal')) {
+                document.getElementById('languageModal').style.display = 'none';
+            }
+        });
+
+        // Back to top functionality
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Initialize with stored language preference
+        if (localStorage.getItem('language')) {
+            switchLanguage(localStorage.getItem('language'));
+        }
+    </script>
+</body>
+</html> 
